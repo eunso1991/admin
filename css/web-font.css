@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+/*NotoSansKr*/
+@font-face {
+	font-family:'NotoSansKr';
+	font-weight:200;
+	font-style:normal;
+	src:url(../fonts/NotoSans-Light.eot),
+		url(../fonts/NotoSans-Light.woff) format('woff');
+}
+
+@font-face {
+	font-family:'NotoSansKr';
+	font-weight:300;
+	font-style:normal;
+	src:url(../fonts/NotoSans-DemiLight.eot),
+		url(../fonts/NotoSans-DemiLight.woff) format('woff');
+}
+
+@font-face {		
+	font-family:'NotoSansKr';
+	font-weight:400;
+	font-style:normal;
+	src:url(../fonts/NotoSans-Regular.eot),
+		url(../fonts/NotoSans-Regular.woff) format('woff');
+}
+	
+@font-face {		
+	font-family:'NotoSansKr';
+	font-weight:500;
+	font-style:normal;
+	src:url(../fonts/NotoSans-Medium.eot),
+		url(../fonts/NotoSans-Medium.woff) format('woff');
+}		
+
+@font-face {		
+	font-family:'NotoSansKr';
+	font-weight:600;
+	font-style:normal;
+	src:url(../fonts/NotoSans-Bold.eot),
+		url(../fonts/NotoSans-Bold.woff) format('woff');
+}
+
+
+
+@font-face {
+	font-family:'Editorial';
+	font-weight:200;
+	font-style:normal;
+	src:url(../fonts/Editorial_New_Ultralight_200.eot),
+		url(../fonts/Editorial_New_Ultralight_200.woff) format('woff');
+}
+
+@font-face {
+	font-family:'Editorial';
+	font-weight:400;
+	font-style:normal;
+	src:url(../fonts/Editorial_New_Regular_400.eot),
+		url(../fonts/Editorial_New_Regular_400.woff) format('woff');
+}
+
+@font-face {		
+	font-family:'Editorial';
+	font-weight:800;
+	font-style:normal;
+	src:url(../fonts/Editorial_New_Ultrabold_800.eot),
+		url(../fonts/Editorial_New_Ultrabold_800.woff) format('woff');
+}
+
+
+
+@font-face {
+	font-family:'NeueMontreal';
+	font-weight:200;
+	font-style:normal;
+	src:url(../fonts/NeueMontreal-Light.eot),
+		url(../fonts/NeueMontreal-Light.woff) format('woff');
+}
+
+@font-face {		
+	font-family:'NeueMontreal';
+	font-weight:300;
+	font-style:normal;
+	src:url(../fonts/NeueMontreal-Regular.eot),
+		url(../fonts/NeueMontreal-Regular.woff) format('woff');
+}
+
+@font-face {
+	font-family:'NeueMontreal';
+	font-weight:400;
+	font-style:normal;
+	src:url(../fonts/NeueMontreal-Medium.eot),
+		url(../fonts/NeueMontreal-Medium.woff) format('woff');
+}
+
+
+
+	
+
+	
+
+
