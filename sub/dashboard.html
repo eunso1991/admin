@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-title" content="ADMIN - Dashboard" />    
+    <title>ADMIN - Dashboard</title>
+    <meta name="description" content="ADMIN - Dashboard" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/web-font.css" />
+    <link rel="stylesheet" href="../css/xeicon.min.css" />
+    <link rel="stylesheet" href="../css/style_pc.css" />      
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../js/common.js"></script>   
+  </head>      
+  <body class="main">    
+    <div id="wrapper" class="on">
+      <a href="#main" id="skip_nav">본문 바로가기</a> 
+      <main id="main">
+        <div class="left_menu">
+          <div class="logoArea">
+              <h1><a href="dashboard.html"><img src="../img/common/logo.svg" alt="logo"></a></h1>
+              <p class="menuClose_btn"><span></span></p>
+          </div>
+          <ul class="subMenu_1depth">
+            <li class="on">
+                <a href="#">Dashboards</a>
+                <ul class="subMenu_2depth">
+                    <li><a href="#">Multipurpose</a></li>
+                    <li><a href="#">eCommerce</a></li>
+                    <li class="on"><a href="javascript:void(0);">Projects</a></li>
+                    <li><a href="#">Online Courses</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Bidding</a></li>
+                </ul>
+            </li>
+            <li>
+              <a href="#">Pages</a>
+              <ul class="subMenu_2depth">
+                <li><a href="list.html">List</a></li>
+                <li><a href="detail.html">Detail</a></li>
+                <li><a href="#">Authentication</a></li>
+                <li><a href="#">Utililties</a></li>
+                <li><a href="#">Widgets</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">My Page</a>
+              <ul class="subMenu_2depth">
+                <li><a href="#">Personal Information</a></li>
+                <li><a href="#">Modify Password</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="left_menu_off">
+            <h1><a href="index.html"><img src="../img/common/logo_small.svg" alt="logo"></a></h1>
+            <p class="menuOpen_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+        </div>
+        <div class="content_wrap" >
+            <div class="header clearfix">
+              <div class="title">
+                <h2>Projects Dashboard</h2>
+                <p>Home - Dashboard - <em>Projects</em></p>
+              </div>                
+              <ul class="header_link clearfix">
+                <li><a href="#"><i class="xi-bell"></i></a></li>
+                <li><a href="#"><i class="xi-cog"></i></a></li>
+                <li><a href="#"><i class="xi-user"></i></a></li>
+                <li><a href="#"><i class="xi-crown"></i></a></li>
+                <li class="logoutBtn"><a href="../login.html"><i class="xi-upload"></i></a></li>
+              </ul>
+            </div>
+            <div class="contents">
+              <section class="container type-1">
+                <section>
+                  <h3 class="title">Sales Statistics <span>Finance and accounting reports</span></h3>
+                  <div class="chart">
+                    <div id="chart_div" style="width:100%; height:400px;"></div>
+                  </div>
+                </section>
+              </section>
+
+              <section class="container type-1">
+                <section>
+                  <table class="search_table">
+                    <colgroup>
+                      <col style="width:125px">
+                      <col style="">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>분류</th>
+                        <td>
+                          <div class="searchbox_line">                   
+                            <select>
+                                <option value="0">선택</option>
+                                <option value="1">대분류</option>
+                                <option value="2">중분류</option>
+                                <option value="3">소분류</option>
+                            </select>                     
+                          </div>
+                        </td>
+                      </tr>                
+                      <tr>
+                        <th>검색</th>
+                        <td>
+                          <div class="searchbox_line">
+                            <input type="search" placeholder="검색할 항목을 입력하세요">
+                            <a href="#" title="검색버튼" class="btn_search">검색</a>
+                          </div>
+                        </td>                  
+                      </tr>
+                    </tbody>              
+                  </table>
+                </section>  
+              </section>
+              <div class="linebox_area clearfix">
+                <span class="list_number f_left">전체 <i>00</i> 건</span>            
+                <select class="select f_right wd100px">
+                    <option value="10">10건</option>
+                    <option value="30">30건</option>
+                    <option value="50">50건</option>
+                </select>
+              </div>
+              <section class="container type-1">
+                <section>
+                  <table class="list_table">
+                    <colgroup>
+                      <col style="width:5%;">
+                      <col style="width:;">
+                      <col style="width:15%;">
+                      <col style="width:;">
+                      <col style="width:15%;">
+                      <col style="width:15%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>NO</th>
+                        <th>ITEM</th>
+                        <th>OPEN PRICE</th>
+                        <th>YOUR OFFER</th>
+                        <th>RECENT OFFER</th>
+                        <th>TIME LEFT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5</td>
+                        <td><a href="detail.html" class="veiw_link">The Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td><a href="detail.html" class="veiw_link">Blue Bubble Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td><a href="detail.html" class="veiw_link">Color Face Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td><a href="detail.html" class="veiw_link">Blue to Orange Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td><a href="detail.html" class="veiw_link">Awesome Bird Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>                                                 
+                    </tbody>
+                  </table>
+                  <div class="rel">
+                    <ul class="pasing mt32">
+                      <li><a href="#"class="controller prev"></a></li>
+                      <li class="on"><a href="#"class="num">1</a></li>
+                      <li><a href="#"class="num">2</a></li>
+                      <li><a href="#"class="num">3</a></li>
+                      <li><a href="#"class="num">4</a></li>
+                      <li><a href="#"class="num">5</a></li>
+                      <li><a href="#"class="controller next"></a></li>
+                    </ul>
+                  </div>
+                </section>
+              </section>
+            </div>
+        </div>       
+      </main>  
+    </div>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'Sales', 'Sales'],
+          ['Feb',  50,30],
+          ['Mar',  60,70],
+          ['Apr',  70,30],
+          ['May',  70,50],
+          ['Jun',  60,40],
+          ['Jul',  50,70],
+          ['Aug',  70,60],
+          ['Sep',  60,50]
+        ]);
+
+        var options = {
+         
+          hAxis: {titleTextStyle: {color:'#d7d7d7'}},
+          vAxis: {titleTextStyle: {color:'#d7d7d7'}, minValue:0, gridlines: {color: '#d9d9d9', count:5}},
+          chartArea:{left:40, right:20, top:50, width:"100%",height:"80%"},
+          legend: {
+            position: 'top', alignment: 'end'
+          },
+          animation:{
+            startup:true,
+            duration:500,
+            easing:'linear'
+          },          
+          
+          series: {
+            0: { color: '#009EF7' },
+            1: { color: '#d7d7d7' }
+          },
+          bar: { groupWidth: "40%" }
+        }       
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+
+      $(window).resize(function(){
+        drawChart();              
+      });
+    </script>
+  </body>
+</html>

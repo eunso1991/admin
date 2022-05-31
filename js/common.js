@@ -1,75 +1,76 @@
 
 $(document).ready(function(){
-    preventDefaultAnchor();
-    scrollEvent_Tit('#main .scroll_event'); 
+  //preventDefaultAnchor();    
     
-    $('body').addClass('active');
-    $('h2.title').find('.text_ani').addClass('on');
+	$(".menuOpen_btn").click(function(){
+		$("#wrapper").addClass('on');		
+	});
+	
+	$(".menuClose_btn").click(function(){
+		$("#wrapper").removeClass('on');		
+	});
 
-    const tweescroll = KUTE.fromTo(
-      '.scroll',
-      {top:0, opacity:1},
-      {top:100, opacity:0},
-      { repeat:Infinity, easing:'easingCubicOut', duration:1500, yoyo:false}
-    ).start();    
+  $(".subMenu_1depth>li.on").find('.subMenu_2depth').show();
 
-  $('.gnb li a').on('click', function(){
-      $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-  });
+  $(".subMenu_1depth>li>a").click(function(e){
+    e.preventDefault();	
 
-  $('.gnbM_btn').on('click', function() {
-    if($(this).hasClass('active')){
-      $(this).removeClass('active');
-      $('#header').removeClass('white');
-      $('#header nav').slideUp(200);
-    }else{
-      $(this).addClass('active');      
-      $('#header').addClass('white'); 
-      $('#header nav').slideDown(200);
-    }
-  });
+		if($(this).parent('li').hasClass("on")){
+			$(this).parent('li').removeClass("on");
+			$(this).parent('li').find('.subMenu_2depth').stop().slideUp(200);
+			$(this).parent('li').siblings('li').removeClass('borderNo');
+
+		} else{
+			
+			$(this).parent('li').addClass("on");
+			$(this).parent('li').find('.subMenu_2depth').stop().slideDown();			
+			$(this).parent('li').siblings('li').find('.subMenu_2depth').stop().slideUp();
+			$(this).parent('li').siblings('li').removeClass('borderNo');
+			$(this).parent('li').siblings('li').removeClass("on");
+			$(this).parent('li').prev('li').addClass('borderNo');		
+		}
+	});	
+
+  //검색상태 버튼
+	$('.stateBtn_line button').on('click',function(){
+		$('.stateBtn_line button').removeClass('on');
+		$(this).addClass('on');
+	});
+
+  $(document).on("click",".upload_list .icon_delete",function(){
+		$(this).parent('li').remove();
+	});
+
+  //파일 첨부
+	$('.fileName').val('선택한 파일이 없습니다');    
+	var uploadFile = $('.uploadBtn');
+	uploadFile.on('change', function(){
+		if(window.FileReader){
+			var filename = $(this)[0].files[0].name;
+		} else {
+			var filename = $(this).val().split('/').pop().split('\\').pop();
+		}
+		$(this).siblings('.fileName').val(filename);
+		if($('.fileBox').hasClass('student') === true){
+			$("#saveBtn").unbind('click');
+			$('#saveBtn').on("click",function(){
+				setThis($(this));
+			});
+		}else{
+			setThis($(this));
+		}
+	});	
+
+	function setThis(a){
+		$saveBtn = $(a);
+		$filename = $('.fileName').val();	
+		$saveBtn.parents('div').siblings('.upload_list').append('<li><a href="#" download="">'+ $filename +'</a><button class="icon_delete hide_txt">삭제</button></li>');
+	}
+
+  
    
 });
 
-function funLoad(){
-	var Cheight = $(window).height();
-	$('#intro').css({'height':Cheight+'px'});
-	$('#detail').css({'margin-top':Cheight+'px'});
-}
-
-window.onload = funLoad;
-window.onresize = funLoad;
-
-$(window).scroll(function() {	
-  scrollEvent_Tit('#main .scroll_event');
-  var scrollTop = $(window).scrollTop();
-  if (scrollTop > 0){
-    $('#header').addClass('fixed');
-  }else{
-    $('#header').removeClass('fixed');
-  }  
-});
-
-function scrollEvent_Tit(selector) {
-      
-  $(selector).each(function() {
-      var $selector = $(this);
-      var start = $selector.offset().top - $(window).innerHeight();
-      var end = $selector.offset().top + $selector.innerHeight();
-      var scrollAmt = $(document).scrollTop();        
-      
-      if (scrollAmt < start) {            
-         
-      } else if (scrollAmt > end) {
-         
-      } else {
-          if( $selector.hasClass('on') === false) {
-              
-          }
-          $selector.addClass('on');
-      }  
-  });     
-}
 
 function preventDefaultAnchor() {
   $(document).on('click', 'a[href="#"]', function(e) {

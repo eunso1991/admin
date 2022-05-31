@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-title" content="ADMIN - Detail" />    
+    <title>ADMIN - Detail</title>
+    <meta name="description" content="ADMIN - Detail" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/web-font.css" />
+    <link rel="stylesheet" href="../css/xeicon.min.css" />
+    <link rel="stylesheet" href="../css/style_pc.css" />      
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../js/common.js"></script>   
+  </head>      
+  <body class="main">    
+    <div id="wrapper" class="on">
+      <a href="#main" id="skip_nav">본문 바로가기</a> 
+      <main id="main">
+        <div class="left_menu">
+          <div class="logoArea">
+              <h1><a href="dashboard.html"><img src="../img/common/logo.svg" alt="logo"></a></h1>
+              <p class="menuClose_btn"><span></span></p>
+          </div>
+          <ul class="subMenu_1depth">
+            <li>
+                <a href="#">Dashboards</a>
+                <ul class="subMenu_2depth">
+                    <li><a href="#">Multipurpose</a></li>
+                    <li><a href="#">eCommerce</a></li>
+                    <li><a href="dashboard.html">Projects</a></li>
+                    <li><a href="#">Online Courses</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Bidding</a></li>
+                </ul>
+            </li>
+            <li class="on">
+              <a href="#">Pages</a>
+              <ul class="subMenu_2depth">
+                  <li><a href="list.html">List</a></li>
+                  <li class="on"><a href="javascript:void(0);">Detail</a></li>
+                  <li><a href="#">Authentication</a></li>
+                  <li><a href="#">Utililties</a></li>
+                  <li><a href="#">Widgets</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">My Page</a>
+              <ul class="subMenu_2depth">
+                <li><a href="#">Personal Information</a></li>
+                <li><a href="#">Modify Password</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="left_menu_off">
+            <h1><a href="index.html"><img src="../img/common/logo_small.svg" alt="logo"></a></h1>
+            <p class="menuOpen_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+        </div>
+        <div class="content_wrap" >
+            <div class="header clearfix">
+              <div class="title">
+                <h2>Projects Dashboard</h2>
+                <p>Home - Dashboard - <em>Projects</em></p>
+              </div>                
+              <ul class="header_link clearfix">
+                <li><a href="#"><i class="xi-bell"></i></a></li>
+                <li><a href="#"><i class="xi-cog"></i></a></li>
+                <li><a href="#"><i class="xi-user"></i></a></li>
+                <li><a href="#"><i class="xi-crown"></i></a></li>
+                <li class="logoutBtn"><a href="../login.html"><i class="xi-upload"></i></a></li>
+              </ul>
+            </div>
+            <div class="contents">
+              <section class="container type-1">
+                <section>
+                  <table class="gride_table">
+                    <colgroup>
+                      <col style="width:15%">
+                      <col style="width:35%;">
+                      <col style="width:15%">
+                      <col style="width:35%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                          <th>ITEM</th>
+                          <td colspan="3">The Art</td>
+                      </tr>
+                      <tr>
+                          <th>REPORTING DATE</th>
+                          <td>0000-00-00 00:00:00</td>
+                          <th>STATE</th>
+                          <td>Ing</td>
+                      </tr>
+                      <tr>
+                          <th>NAME</th>
+                          <td>Hong Gildong</td>
+                          <th>BIRTH DATE</th>
+                          <td>1990.00.00</td>
+                      </tr>
+                      <tr>
+                          <th>GENDER</th>
+                          <td>female</td>
+                          <th>EMAIL</th>
+                          <td>mail@mail.com</td>
+                      </tr>
+                      <tr>
+                        <th>RADIO</th>
+                        <td>
+                          <label class="conbox checkArea">
+                            <span>YES</span>
+                            <input type="radio" name="radio1">
+                            <span class="radiomark"></span>                      
+                          </label>
+                          <label class="conbox checkArea">
+                            <span>NO</span>
+                            <input type="radio" name="radio1" checked="checked">
+                            <span class="radiomark"></span>                      
+                          </label>
+                        </td>
+                        <th>CHECKBOX</th>
+                        <td>
+                          <label class="conbox checkArea">
+                            <span class="">option 1</span>
+                            <input type="checkbox" name="check1">
+                            <span class="checkmark"></span>                      
+                          </label>
+                          <label class="conbox checkArea">
+                            <span class="">option 2</span>
+                            <input type="checkbox" name="check2" checked="checked">
+                            <span class="checkmark"></span>                      
+                          </label>
+                          <label class="conbox checkArea">
+                            <span class="">option 3</span>
+                            <input type="checkbox" name="check3" checked="checked">
+                            <span class="checkmark"></span>                      
+                          </label>
+                        </td>
+                      </tr>                                                             
+                      <tr>
+                        <th>FILE</th>
+                        <td colspan="3">
+                          <div class="fileBox student">
+                            <div class="fileSearch_area">
+                              <input type="text" class="fileName" readonly="readonly">
+                              <label for="uploadBtn" class="searchBtn solidbtn large blue">File Search</label>
+                              <a href="javascript:void(0);" id="saveBtn" class="btn large blue">Save</a>
+                              <input type="file" id="uploadBtn" class="uploadBtn">
+                            </div>  
+                            <ul class="upload_list mt32 clearfix">
+                              <li><a href="#" download="index.html">fileName01.txt</a><button class="icon_delete hide_txt">삭제</button></li>
+                              <li><a href="#" download="index.html">fileName02.txt</a><button class="icon_delete hide_txt">삭제</button></li>
+                              <li><a href="#" download="index.html">fileName03.txt</a><button class="icon_delete hide_txt">삭제</button></li>
+                            </ul>
+                          </div>                    
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="btn_area tar">
+                    <a href="list.html" class="roundbtn x_large blue">LIST</a>
+                  </div>
+                </section>
+              </section>
+            </div>
+        </div>       
+      </main>  
+    </div>
+  </body>
+</html>

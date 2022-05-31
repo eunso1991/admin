@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-title" content="ADMIN - LIST" />    
+    <title>ADMIN - LIST</title>
+    <meta name="description" content="ADMIN - LIST" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/web-font.css" />
+    <link rel="stylesheet" href="../css/xeicon.min.css" />
+    <link rel="stylesheet" href="../css/style_pc.css" />    
+    <link rel="stylesheet" href="../css/jquery-ui.css" /> 
+         
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script> 
+    <script src="../js/common.js"></script>  
+  </head>      
+  <body class="main">    
+    <div id="wrapper" class="on">
+      <a href="#main" id="skip_nav">본문 바로가기</a> 
+      <main id="main">
+        <div class="left_menu">
+          <div class="logoArea">
+              <h1><a href="dashboard.html"><img src="../img/common/logo.svg" alt="logo"></a></h1>
+              <p class="menuClose_btn"><span></span></p>
+          </div>
+          <ul class="subMenu_1depth">
+            <li>
+                <a href="#">Dashboards</a>
+                <ul class="subMenu_2depth">
+                    <li><a href="#">Multipurpose</a></li>
+                    <li><a href="#">eCommerce</a></li>
+                    <li><a href="dashboard.html">Projects</a></li>
+                    <li><a href="#">Online Courses</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Bidding</a></li>
+                </ul>
+            </li>
+            <li class="on">
+              <a href="#">Pages</a>
+              <ul class="subMenu_2depth">
+                <li class="on"><a href="javascript:void(0);">List</a></li>
+                <li><a href="detail.html">Detail</a></li>
+                <li><a href="#">Authentication</a></li>
+                <li><a href="#">Utililties</a></li>
+                <li><a href="#">Widgets</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">My Page</a>
+              <ul class="subMenu_2depth">
+                  <li><a href="#">Personal Information</a></li>
+                  <li><a href="#">Modify Password</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="left_menu_off">
+            <h1><a href="index.html"><img src="../img/common/logo_small.svg" alt="logo"></a></h1>
+            <p class="menuOpen_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+        </div>
+        <div class="content_wrap" >
+            <div class="header clearfix">
+              <div class="title">
+                <h2>Projects Dashboard</h2>
+                <p>Home - Dashboard - <em>Projects</em></p>
+              </div>                
+              <ul class="header_link clearfix">
+                <li><a href="#"><i class="xi-bell"></i></a></li>
+                <li><a href="#"><i class="xi-cog"></i></a></li>
+                <li><a href="#"><i class="xi-user"></i></a></li>
+                <li><a href="#"><i class="xi-crown"></i></a></li>
+                <li class="logoutBtn"><a href="../login.html"><i class="xi-upload"></i></a></li>
+              </ul>
+            </div>
+            <div class="contents"> 
+              <section class="container type-1">
+                <section>
+                  <table class="search_table">
+                    <colgroup>
+                      <col style="width:125px">
+                      <col style="">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>CATEGORI</th>
+                        <td>
+                          <div class="searchbox_line">                   
+                            <select>
+                                <option value="0">Categori 1</option>
+                                <option value="1">OPTION - 1</option>
+                                <option value="2">OPTION - 2</option>
+                                <option value="3">OPTION - 3</option>
+                            </select>
+                            <select>
+                              <option value="0">Categori 2</option>
+                              <option value="1">OPTION - 1</option>
+                              <option value="2">OPTION - 2</option>
+                              <option value="3">OPTION - 3</option>
+                            </select>
+                            <select>
+                              <option value="0">Categori 3</option>
+                              <option value="1">OPTION - 1</option>
+                              <option value="2">OPTION - 2</option>
+                              <option value="3">OPTION - 3</option>
+                            </select>                      
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>STATE</th>
+                        <td>
+                          <div class="searchbox_line stateBtn_line">
+                            <button type="button" class="on">All</button>
+                            <button type="button">Ing</button>                      
+                            <button type="button">Receiving</button> 
+                            <button type="button">Standby</button>
+                            <button type="button">End</button> 
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>DATE</th>
+                        <td>
+                          <div class="searchbox_line">
+                            <input type="text" id="stDate" class="datepicker" placeholder="시작일을 선택하세요">
+                          </div>
+                        </td>                  
+                      </tr>
+                      <tr>
+                        <th>ITEM SEARCH</th>
+                        <td>
+                          <div class="searchbox_line">
+                            <input type="search" placeholder="Please enter a Item">
+                            <a href="#" title="검색버튼" class="btn_search">Search</a>
+                          </div>
+                        </td>                  
+                      </tr>
+                    </tbody>              
+                  </table>
+                </section>  
+              </section>
+              <div class="linebox_area clearfix">
+                <span class="list_number f_left">전체 <i>00</i> 건</span>            
+                <select class="select f_right wd100px">
+                    <option value="10">10건</option>
+                    <option value="30">30건</option>
+                    <option value="50">50건</option>
+                </select>
+              </div>
+              <section class="container type-1">
+                <section>
+                  <table class="list_table">
+                    <colgroup>
+                      <col style="width:5%;">
+                      <col style="width:;">
+                      <col style="width:15%;">
+                      <col style="width:;">
+                      <col style="width:15%;">
+                      <col style="width:15%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>NO</th>
+                        <th>ITEM</th>
+                        <th>OPEN PRICE</th>
+                        <th>YOUR OFFER</th>
+                        <th>RECENT OFFER</th>
+                        <th>TIME LEFT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>10</td>
+                        <td><a href="detail.html" class="veiw_link">The Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td><a href="detail.html" class="veiw_link">Blue Bubble Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td><a href="detail.html" class="veiw_link">Color Face Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td><a href="detail.html" class="veiw_link">Blue to Orange Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td><a href="detail.html" class="veiw_link">Awesome Bird Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td><a href="detail.html" class="veiw_link">The Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td><a href="detail.html" class="veiw_link">Blue Bubble Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td><a href="detail.html" class="veiw_link">Color Face Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td><a href="detail.html" class="veiw_link">Blue to Orange Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td><a href="detail.html" class="veiw_link">Awesome Bird Art</a></td>
+                        <td>0.054 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>0.089 ETH</td>
+                        <td>1h 43m 52s</td>                        
+                      </tr>                                                  
+                    </tbody>
+                  </table>
+                  <div class="rel">
+                    <ul class="pasing mt32">
+                      <li><a href="#"class="controller prev"></a></li>
+                      <li class="on"><a href="#"class="num">1</a></li>
+                      <li><a href="#"class="num">2</a></li>
+                      <li><a href="#"class="num">3</a></li>
+                      <li><a href="#"class="num">4</a></li>
+                      <li><a href="#"class="num">5</a></li>
+                      <li><a href="#"class="controller next"></a></li>
+                    </ul>
+                  </div>
+                </section>
+              </section>
+            </div>
+        </div>       
+      </main>  
+    </div>
+    <script>
+      $(document).ready(function(){
+            //input을 datepicker로 선언
+        $(".datepicker").datepicker({
+          dateFormat: 'yy-mm-dd' //Input Display Format 변경
+          ,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+          ,showMonthAfterYear:true //년도 먼저 나오고, 뒤에 월 표시
+                
+          // ,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+          // ,buttonImage: "../img/icon_datepicker_on.png" //버튼 이미지 경로
+          // ,buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
+          ,buttonText: "선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트                
+          ,yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
+          ,monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력의 월 부분 텍스트
+          ,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip 텍스트
+          ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 부분 텍스트
+          ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 부분 Tooltip 텍스트
+          ,minDate: "-1M" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+          ,maxDate: "+1Y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                
+        });
+        
+        //초기값을 오늘 날짜로 설정
+        $('.datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+      })
+  
+    </script>
+  </body>
+</html>
